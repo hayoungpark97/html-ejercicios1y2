@@ -1,0 +1,95 @@
+/* 🌸 Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+    --rosa-suave: #f4c2d7;
+    --lavanda: #cdb4db;
+    --crema: #fff1e6;
+    --gris-oscuro: #3a3a3a;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #fff1e6 0%,
+        #f4c2d7 40%,
+        #cdb4db 100%
+    );
+    color: var(--gris-oscuro);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: var(--lavanda);
+    text-align: center;
+    margin-bottom: 1rem;
+    animation: fadeUp 1s ease forwards;
+}
+
+h2 {
+    font-size: 1.6rem;
+    color: var(--crema);
+    margin-top: 2.5rem;
+}
+
+img {
+    display: block;
+    width: 220px;
+    max-width: 60%;
+    border-radius: 50%;
+    margin: 1.5rem auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    animation: fadeUp 1.3s ease forwards;
+}
+
+img:hover {
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
+}
+
+p {
+    font-size: 1rem;
+    max-width: 70ch;
+    margin: 0 auto;
+    text-align: center;
+}
+
+p, h2, ul, ol {
+    animation: fadeUp 1.5s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body::after {
+    content: "🐶";
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 3rem;
+    opacity: 0.6;
+    animation: floatDog 4s ease-in-out infinite;
+}
+
+@keyframes floatDog {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
